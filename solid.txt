@@ -1,0 +1,9 @@
+SOLID
+
+5 princípios
+
+1 - SRP (Single Responsability Principle)
+
+Separar coisas que mudam por motivos diferentes
+
+Mover responsabilidades

@@ -15,13 +15,7 @@ export default class Order {
     let taxes = 0
 
     for (const item of this.items) {
-      if (item.category === 'Beer') {
-        taxes += item.price * 0.1
-      }
-
-      if (item.category === 'Whisky') {
-        taxes += item.price * 0.2
-      }
+      taxes += item.calculateTaxes()
     }
 
     return taxes
