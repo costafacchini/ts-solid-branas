@@ -7,3 +7,9 @@ SOLID
 Separar coisas que mudam por motivos diferentes
 
 Mover responsabilidades
+
+2 - OCP
+
+Open/Closes Principle
+
+Devemos estar fechados para modificação e abertos para extensão do código

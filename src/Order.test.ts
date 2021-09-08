@@ -1,11 +1,13 @@
 import Order from './Order'
-import Item from './Item'
+import Beer from './Beer'
+import Whisky from './Whisky'
+import Water from './Water'
 
 test('Deve criar um pedido', () => {
   const order = new Order()
-  order.AddItem(new Item('Beer', 'Budweiser', 10))
-  order.AddItem(new Item('Whisky', 'Jack Daniels', 100))
-  order.AddItem(new Item('Water', 'Crystal', 1))
+  order.AddItem(new Beer('Budweiser', 10))
+  order.AddItem(new Whisky('Jack Daniels', 100))
+  order.AddItem(new Water('Crystal', 1))
 
   const total = order.getTotal()
 
@@ -14,9 +16,9 @@ test('Deve criar um pedido', () => {
 
 test('Deve calcular os impostos', () => {
   const order = new Order()
-  order.AddItem(new Item('Beer', 'Budweiser', 10)) //10:
-  order.AddItem(new Item('Whisky', 'Jack Daniels', 100)) //20
-  order.AddItem(new Item('Water', 'Crystal', 1)) //Isento
+  order.AddItem(new Beer('Budweiser', 10))
+  order.AddItem(new Whisky('Jack Daniels', 100))
+  order.AddItem(new Water('Crystal', 1))
 
   const impostos = order.getTaxes()
 
