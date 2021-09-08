@@ -1,0 +1,16 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Project to study TS and SOLID principies",
+  "main": "index.js",
+  "author": "Alan Costa Facchini <costafacchini@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "tsc && jest ./dist"
+  },
+  "dependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.1.0",
+    "typescript": "^4.4.2"
+  }
+}
