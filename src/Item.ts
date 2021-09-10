@@ -8,10 +8,4 @@ export default abstract class Item {
     this.description = description
     this.price = price
   }
-
-  calculateTaxes(): number {
-    return this.price * this.getTax()
-  }
-
-  abstract getTax(): number
 }

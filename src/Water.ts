@@ -6,7 +6,4 @@ export default class Water extends Item {
     super('Water', description, price)
   }
 
-  getTax(): number {
-    throw new Error('Água é isenta de impostos')
-  }
 }

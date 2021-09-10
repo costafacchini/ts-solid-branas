@@ -29,3 +29,9 @@ Por exemplo a classe pessoa responder com uma exception num método que a subcla
 Invariantes devem ser consistentes
 Uma subclasse permitir que o estado conceitual da hierarquia de classes fique inválido.
 Por exemplo a classe pessoa aceita idade > 0 e uma subclasse dela aceitar idade < 0.
+
+4 - ISP
+
+Interface Segregation Principle
+
+Cuidado com interfaces MUITO ABRANGENTES, não obrigue subclasses a implementar métodos que elas não precisam
