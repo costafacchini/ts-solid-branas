@@ -2,9 +2,10 @@ import Order from './Order'
 import Beer from './Beer'
 import Whisky from './Whisky'
 import Water from './Water'
+import MessageDataFile from './MessageDataFile'
 
 test('Deve criar um pedido', () => {
-  const order = new Order()
+  const order = new Order(new MessageDataFile)
   order.AddItem(new Beer('Budweiser', 10))
   order.AddItem(new Whisky('Jack Daniels', 100))
   order.AddItem(new Water('Crystal', 1))
@@ -15,7 +16,7 @@ test('Deve criar um pedido', () => {
 })
 
 test('Deve calcular os impostos', () => {
-  const order = new Order()
+  const order = new Order(new MessageDataFile)
   order.AddItem(new Beer('Budweiser', 10))
   order.AddItem(new Whisky('Jack Daniels', 100))
   order.AddItem(new Water('Crystal', 1))
@@ -26,7 +27,7 @@ test('Deve calcular os impostos', () => {
 })
 
 test('Deve criar um pedido e imprimir uma mensagem em português', async () => {
-  const order = new Order()
+  const order = new Order(new MessageDataFile)
   order.AddItem(new Beer('Budweiser', 10))
   order.AddItem(new Whisky('Jack Daniels', 100))
   order.AddItem(new Water('Crystal', 1))
@@ -37,7 +38,7 @@ test('Deve criar um pedido e imprimir uma mensagem em português', async () => {
 })
 
 test('Deve criar um pedido e imprimir uma mensagem em inglês', async () => {
-  const order = new Order()
+  const order = new Order(new MessageDataFile)
   order.AddItem(new Beer('Budweiser', 10))
   order.AddItem(new Whisky('Jack Daniels', 100))
   order.AddItem(new Water('Crystal', 1))

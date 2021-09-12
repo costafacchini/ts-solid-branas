@@ -1,12 +1,14 @@
 import Item from './Item'
 import TaxItem from './TaxItem'
-import fs from 'fs/promises'
+import MessgageData from './MessageData'
 
 export default class Order {
   items: Item[]
+  messageData: MessgageData
 
-  constructor() {
+  constructor(messageData: MessgageData) {
     this.items = []
+    this.messageData = messageData
   }
 
   AddItem(item: Item) {
@@ -30,7 +32,7 @@ export default class Order {
   }
 
   async printMessage(language: string): Promise<string> {
-    const message = await fs.readFile(`./messages/${language}.txt`, 'utf-8')
+    const message = await this.messageData.read(language)
     return message.replace('${total}', this.getTotal() + '').replace('${taxes}', this.getTaxes() + '')
   }
 }
