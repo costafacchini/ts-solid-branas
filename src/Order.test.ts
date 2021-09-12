@@ -24,3 +24,25 @@ test('Deve calcular os impostos', () => {
 
   expect(impostos).toBe(21)
 })
+
+test('Deve criar um pedido e imprimir uma mensagem em português', async () => {
+  const order = new Order()
+  order.AddItem(new Beer('Budweiser', 10))
+  order.AddItem(new Whisky('Jack Daniels', 100))
+  order.AddItem(new Water('Crystal', 1))
+
+  const message = await order.printMessage('pt')
+
+  expect(message).toBe('O total foi de R$111, os impostos foram R$21. Obrigado pelo seu pedido!')
+})
+
+test('Deve criar um pedido e imprimir uma mensagem em inglês', async () => {
+  const order = new Order()
+  order.AddItem(new Beer('Budweiser', 10))
+  order.AddItem(new Whisky('Jack Daniels', 100))
+  order.AddItem(new Water('Crystal', 1))
+
+  const message = await order.printMessage('en')
+
+  expect(message).toBe('The total was R$111, the taxes was R$21. Thanks for your order!')
+})

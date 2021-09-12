@@ -35,3 +35,9 @@ Por exemplo a classe pessoa aceita idade > 0 e uma subclasse dela aceitar idade 
 Interface Segregation Principle
 
 Cuidado com interfaces MUITO ABRANGENTES, não obrigue subclasses a implementar métodos que elas não precisam
+
+5 - DIP
+
+Dependency Inversion Principle
+
+Módulos de alto nível não devem depender de módulos de baixo nível
